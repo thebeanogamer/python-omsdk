@@ -33,6 +33,9 @@ and monitoring of PowerEdge Servers.
 
 %package -n python3-omsdk
 Summary:        %{summary}
+
+# Whilst omsdk and omdrivers are seperate modules, they have circular dependencies which prevent them being distributed seperately
+# If you install one of them from PyPi you get a wheel containing both.
 %py_provides python3-omsdk
 %py_provides python3-omdrivers
 
@@ -42,10 +45,16 @@ Summary:        %{summary}
 
 %prep
 %autosetup -p0 -n omsdk-%{version}
+
+# Upstream provides seperate setup.py files for omdrivers and omsdk, but we only need one of them
 mv setup-omsdk.py setup.py
+
 # ipaddress was merged into Python 3.3, so it does not need to de a dependancy
 sed -i '/ipaddress>=0/d' setup.py
+
+# Wheel version is loaded from file
 echo "%{version}" > _version.txt
+
 # Upstream has shebangs on non-executable files
 find omsdk -type f -exec sed -i '/\/usr\/bin\/env python3/d' {} +
 find omdrivers -type f -exec sed -i '/\/usr\/bin\/env python3/d' {} +
