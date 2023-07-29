@@ -18,8 +18,12 @@ BuildRequires:  python3dist(pywinrm)
 Requires:       python3dist(pywinrm)
 
 %global _description %{expand:
-DellEMC OpenManage Python SDK (OMSDK) is a python library that helps developers and customers to automate the lifecycle management of PowerEdge Servers.
-OMSDK module leverages the iDRAC's REST APIs based on DMTF Redfish standards as well as WS-Man and SNMP protocols for configuration, deployment, updates and monitoring of PowerEdge Servers.
+DellEMC OpenManage Python SDK (OMSDK) is a python library that helps 
+developers and customers to automate the lifecycle management of 
+PowerEdge Servers.
+OMSDK module leverages the iDRAC's REST APIs based on DMTF Redfish standards 
+as well as WS-Man and SNMP protocols for configuration, deployment, updates 
+and monitoring of PowerEdge Servers.
 }
 
 %description %_description
