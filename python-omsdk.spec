@@ -1,7 +1,7 @@
 Name:           python-omsdk
 Version:        1.2.509
 Release:        %autorelease
-Summary:         Dell EMC OpenManage Python SDK 
+Summary:        Dell EMC OpenManage Python SDK 
 
 License:        Apache-2.0
 URL:            https://github.com/dell/omsdk
@@ -17,7 +17,7 @@ BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(wheel)
 BuildRequires:  python3dist(pywinrm)
-Requires:  python3dist(pywinrm)
+Requires:       python3dist(pywinrm)
 
 %global _description %{expand:
 DellEMC OpenManage Python SDK (OMSDK) is a python library that helps developers and customers to automate the lifecycle management of PowerEdge Servers.
