@@ -14,8 +14,6 @@ BuildRequires:  sed
 BuildRequires:  pyproject-rpm-macros
 
 # Untracked upstream dependencies (https://github.com/dell/omsdk/issues/36)
-BuildRequires:  python3dist(setuptools)
-BuildRequires:  python3dist(wheel)
 BuildRequires:  python3dist(pywinrm)
 Requires:       python3dist(pywinrm)
 
