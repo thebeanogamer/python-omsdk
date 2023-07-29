@@ -59,7 +59,7 @@ sed -i 's/\r$//' README.md
 
 
 %build
-OMSDK_VERSION=%{version} %pyproject_wheel
+%pyproject_wheel
 
 
 %install
