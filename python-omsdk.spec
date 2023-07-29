@@ -13,10 +13,8 @@ BuildRequires:  python3-devel
 BuildRequires:  sed
 BuildRequires:  pyproject-rpm-macros
 
-# Untracked upstream dependencies (https://github.com/dell/omsdk/issues/36)
-BuildRequires:  python3dist(pywinrm)
-Requires:       python3dist(pywinrm)
-
+# Untracked upstream dependency (https://github.com/dell/omsdk/issues/36)
+BuildRequires:  python%{python3_pkgversion}dist(pywinrm)
 
 %global _description %{expand:
 DellEMC OpenManage Python SDK (OMSDK) is a python library that helps 
@@ -38,6 +36,9 @@ Summary:        %{summary}
 # If you install one of them from PyPi you get a wheel containing both.
 %py_provides python3-omsdk
 %py_provides python3-omdrivers
+
+# Untracked upstream dependency (https://github.com/dell/omsdk/issues/36)
+Requires:       python%{python3_pkgversion}dist(pywinrm)
 
 
 %description -n python3-omsdk %_description
