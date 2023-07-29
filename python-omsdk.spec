@@ -17,6 +17,7 @@ BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3dist(pywinrm)
 Requires:       python3dist(pywinrm)
 
+
 %global _description %{expand:
 DellEMC OpenManage Python SDK (OMSDK) is a python library that helps 
 developers and customers to automate the lifecycle management of 
@@ -26,14 +27,18 @@ as well as WS-Man and SNMP protocols for configuration, deployment, updates
 and monitoring of PowerEdge Servers.
 }
 
+
 %description %_description
+
 
 %package -n python3-omsdk
 Summary:        %{summary}
 %py_provides python3-omsdk
 %py_provides python3-omdrivers
 
+
 %description -n python3-omsdk %_description
+
 
 %prep
 %autosetup -p0 -n omsdk-%{version}
