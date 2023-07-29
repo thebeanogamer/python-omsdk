@@ -1,0 +1,4 @@
+*.rpm
+rpmbuild
+python-omsdk
+*.py

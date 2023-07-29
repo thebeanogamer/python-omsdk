@@ -1,0 +1,11 @@
+--- setup-omsdk-orig.py	2023-07-16 18:34:02.270204932 +0100
++++ setup-omsdk.py	2023-07-29 16:21:16.248217987 +0100
+@@ -18,7 +18,7 @@
+ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+     long_description = f.read()
+ # Get the version from _version file 
+-with open('/tmp/_version.txt', 'r') as v:
++with open('./_version.txt', 'r') as v:
+     ver = v.read()
+ 
+ # conditional dependency:include enum34 if python 2 is in use
